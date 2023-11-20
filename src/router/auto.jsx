@@ -14,12 +14,6 @@ const routes = [{
   [MENU_PATH]: "/icons",
   components: () => import("../pages/icons/index.tsx")
 }, {
-  [MENU_PATH]: "/list/card",
-  components: () => import("../pages/list/card.tsx")
-}, {
-  [MENU_PATH]: "/list/search",
-  components: () => import("../pages/list/search.tsx")
-}, {
   [MENU_PATH]: "/power/menu",
   components: () => import("../pages/power/menu.tsx")
 }, {
@@ -28,6 +22,12 @@ const routes = [{
 }, {
   [MENU_PATH]: "/power/user",
   components: () => import("../pages/power/user.tsx")
+}, {
+  [MENU_PATH]: "/list/card",
+  components: () => import("../pages/list/card.tsx")
+}, {
+  [MENU_PATH]: "/list/search",
+  components: () => import("../pages/list/search.tsx")
 }, {
   [MENU_PATH]: "/statistics/feedback",
   components: () => import("../pages/statistics/feedback.tsx")
