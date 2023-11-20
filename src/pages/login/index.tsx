@@ -9,6 +9,8 @@ import { UserInfo } from "@/types"
 import "./index.less";
 import { useThemeToken } from "@/hooks";
 
+
+
 const IPT_RULE_USERNAME = [
   {
     required: true,
@@ -23,7 +25,7 @@ const IPT_RULE_PASSWORD = [
   },
 ];
 
-export default function Login() {
+function Login() {
   const [btnLoad, setBtnLoad] = useState(false);
   const dispatch = useDispatch()
   const setUserInfo = useCallback((info: UserInfo) => dispatch(setUserInfoAction(info)), [dispatch])
@@ -50,7 +52,7 @@ export default function Login() {
   return (
     <div className="login-container" style={{ backgroundColor: token.colorBgContainer }}>
       <div className="wrapper">
-        <div className="title">react-ant-admin</div>
+        <div className="title">react-ant-admin管理系统</div>
         <div className="welcome">欢迎使用，请先登录</div>
         <Form
           className="login-form"
@@ -95,3 +97,5 @@ export default function Login() {
     </div>
   );
 }
+
+export default Login;

@@ -35,16 +35,16 @@ const residences = [
     ],
   },
   {
-    value: "广东省",
-    label: "广东省",
+    value: "河北省",
+    label: "河北省",
     children: [
       {
-        value: "深圳市",
-        label: "深圳市",
+        value: "承德市",
+        label: "承德市",
         children: [
           {
-            value: "平安大厦",
-            label: "平安大厦",
+            value: "避暑山庄",
+            label: "避暑山庄",
           },
         ],
       },
@@ -314,7 +314,7 @@ function RegistrationForm() {
         </Form.Item>
         <Form.Item {...tailFormItemLayout}>
           <Button type="primary" htmlType="submit">
-            Register
+            注册
           </Button>
           <Button danger onClick={back} type='link'>
             返回上一页

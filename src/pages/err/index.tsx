@@ -45,7 +45,7 @@ export default function ErrorPage(props: ErrProps) {
       subTitle={subTitle}
       extra={
         <Button type="primary" onClick={back}>
-          Go Back
+          返回
         </Button>
       }
     />

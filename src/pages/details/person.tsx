@@ -7,23 +7,26 @@ import { useStyle } from "./style";
 const { Meta } = Card;
 
 const tagInitVal = [
-  { value: "足球", color: "magenta" },
-  { value: "跑步", color: "volcano" },
-  { value: "web前端", color: "orange" },
-  { value: "90后", color: "gold" },
+  { value: "HTML5", color: "orange" },
+  { value: "CSS3", color: "yellow" },
+  { value: "JavaScript", color: "green" },
+  { value: "TypeScript", color: "blue" },
+  { value: "NodeJS", color: "purple" },
+  { value: "Vue", color: "red" },
+  { value: "React", color: "black" },
+  { value: "Uniapp", color: "skyblue" },
 ];
 function getRandomColor() {
   return "#" + Math.random().toString(16).slice(2, 8);
 }
 
-const listData = Array.from({ length: 10 }, (v, k) => ({
-  href: "https://ant.design",
-  title: `ant design part ${k + 1}`,
+const listData = Array.from({ length: 10 }, (_, k) => ({
+  title: `代码书院实验室简介 ${k + 1}`,
   avatar: "https://zos.alipayobjects.com/rmsportal/ODTLcjxAfvqbxHnVXCYX.png",
   description:
-    "Ant Design, a design language for background applications, is refined by Ant UED Team.",
+    "实验室负责人：陈毅",
   content:
-    "We supply a series of design principles, practical patterns and high quality design resources (Sketch and Axure), to help people create their product prototypes beautifully and efficiently.",
+    "代码书院实验室位于长春理工大学南校区西侧远创国际大楼第25层，是吉林省重点信息实验室，下设有前端开发组、后端开发组、数据库开发组、人工智能开发组，规模约有100人",
 }));
 
 const IconText = ({ icon, text }: { icon: ReactNode, text: string }) => (
@@ -33,7 +36,7 @@ const IconText = ({ icon, text }: { icon: ReactNode, text: string }) => (
   </Space>
 );
 
-const tabpanes = Array.from({ length: 3 }, (v, k) => ({
+const tabpanes = Array.from({ length: 3 }, (_, k) => ({
   key: k + '',
   label: `tab${k + 1}`,
   children: (<List
@@ -71,7 +74,7 @@ const tabpanes = Array.from({ length: 3 }, (v, k) => ({
       >
         <List.Item.Meta
           avatar={<Avatar src={item.avatar} />}
-          title={<a href={item.href}>{item.title}</a>}
+          title={<p>{item.title}</p>}
           description={item.description}
         />
         {item.content}
@@ -103,35 +106,34 @@ export default function Person() {
             cover={
               <img
                 alt="example"
-                src="https://avatars.githubusercontent.com/u/56569970?v=4"
+                src="https://img2.baidu.com/it/u=4271918474,2449530221&fm=253&fmt=auto&app=138&f=JPEG?w=500&h=333"
               />
             }
           >
-            <Meta title="孔乙己拉夫米" description="生死看淡不服就干！" />
+            <Meta title="张xx、华xx" description="一组无敌，所向披靡" />
             <div className={styles.info}>
               <p>
                 <MyIcon type="icon_infopersonal" className="icon" />
-                Web前端
-                <span className={styles.font}>123</span>
+                前端开发一组
               </p>
               <p>
                 <MyIcon type="icon_address1" className="icon" />
-                广东·深圳
+                吉林长春
               </p>
               <p>
                 <MyIcon type="icon_edit" className="icon" />
                 <a
-                  href="https://www.cnblogs.com/kongyijilafumi/"
+                  href="https://blog.csdn.net/qq_51904231?spm=1000.2115.3001.5343"
                   target="_blank"
                   rel="noreferrer"
                 >
-                  博客地址
+                  原创博客地址
                 </a>
               </p>
               <p>
                 <MyIcon type="icon_github" className="icon" />
                 <a
-                  href="https://github.com/kongyijilafumi/"
+                  href="https://github.com/rinba"
                   target="_blank"
                   rel="noreferrer"
                 >
@@ -140,13 +142,7 @@ export default function Person() {
               </p>
               <p>
                 <MyIcon className="icon" type="icon_QQ" />
-                <a
-                  href="https://jq.qq.com/?_wv=1027&k=pzP2acC5"
-                  target="_blank"
-                  rel="noreferrer"
-                >
-                  qq交流群
-                </a>
+                3255620496
               </p>
             </div>
             <div className="tags">

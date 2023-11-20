@@ -41,7 +41,7 @@ export default function FeedBack() {
     title: "操作",
     dataIndex: "action",
     align: "center",
-    render: (text: any, record: any) => {
+    render: (record: any) => {
       if (record.f_back) {
         return "已回复";
       }
