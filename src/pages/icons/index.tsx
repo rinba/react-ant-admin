@@ -41,7 +41,7 @@ export default function Icons() {
   const { change, icons } = useIcons();
   return (
     <div className="icons-container">
-      <h2>Icon自定义</h2>
+      <h2>自定义图标</h2>
       <div className="mt10">你可以使用ant-design的语义化的矢量图形。</div>
       <div className="mt10">
         你也可以在

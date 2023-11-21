@@ -1,5 +1,5 @@
 import { Layout, Menu, Dropdown } from "antd";
-import logo from "@/assets/images/logo.svg";
+import logo from "@/assets/images/bear.jpg";
 import MyIcon from "@/components/icon/";
 import {
   setKey,
@@ -49,7 +49,7 @@ const LayoutHeader = ({ children }: LayoutHeaderProps) => {
     <Header className={styles.header}>
       <div className="logo">
         <img src={logo} alt="logo"></img>
-        <span>react-ant-admin</span>
+        <span>后台管理系统</span>
       </div>
       {children}
       <div className="right">
