@@ -146,15 +146,15 @@ function RegistrationForm() {
       >
         <Form.Item
           name="email"
-          label="E-mail"
+          label="电子邮件"
           rules={[
             {
               type: "email",
-              message: "The input is not valid E-mail!",
+              message: "输入的电子邮件无效！",
             },
             {
               required: true,
-              message: "Please input your E-mail!",
+              message: "请输入您的电子邮件",
             },
           ]}
         >
@@ -163,11 +163,11 @@ function RegistrationForm() {
 
         <Form.Item
           name="password"
-          label="Password"
+          label="密码"
           rules={[
             {
               required: true,
-              message: "Please input your password!",
+              message: "请输入您的密码！",
             },
           ]}
           hasFeedback
@@ -177,13 +177,13 @@ function RegistrationForm() {
 
         <Form.Item
           name="confirm"
-          label="Confirm Password"
+          label="确认密码"
           dependencies={["password"]}
           hasFeedback
           rules={[
             {
               required: true,
-              message: "Please confirm your password!",
+              message: "请再次输入您的密码",
             },
             ({ getFieldValue }) => ({
               validator(_, value) {
@@ -192,7 +192,7 @@ function RegistrationForm() {
                 }
 
                 return Promise.reject(
-                  new Error("The two passwords that you entered do not match!")
+                  new Error("您输入的两个密码不匹配！")
                 );
               },
             }),
@@ -203,12 +203,12 @@ function RegistrationForm() {
 
         <Form.Item
           name="nickname"
-          label="Nickname"
-          tooltip="What do you want others to call you?"
+          label="昵称"
+          tooltip="您希望别人怎么称呼你"
           rules={[
             {
               required: true,
-              message: "Please input your nickname!",
+              message: "请输入您的昵称",
               whitespace: true,
             },
           ]}
@@ -218,12 +218,12 @@ function RegistrationForm() {
 
         <Form.Item
           name="residence"
-          label="Habitual Residence"
+          label="居住地"
           rules={[
             {
               type: "array",
               required: true,
-              message: "Please select your habitual residence!",
+              message: "请输入您的居住地！",
             },
           ]}
         >
@@ -232,11 +232,11 @@ function RegistrationForm() {
 
         <Form.Item
           name="phone"
-          label="Phone Number"
+          label="电话号码"
           rules={[
             {
               required: true,
-              message: "Please input your phone number!",
+              message: "请输入您的电话号码！",
             },
           ]}
         >
@@ -250,26 +250,26 @@ function RegistrationForm() {
 
         <Form.Item
           name="website"
-          label="Website"
+          label="网站"
           rules={[
             {
               required: true,
-              message: "Please input website!",
+              message: "请输入您的个人网站！",
             },
           ]}
         >
           <AutoComplete
             options={websiteOptions}
             onChange={onWebsiteChange}
-            placeholder="website"
+            placeholder="例如：xxx.com"
           >
             <Input />
           </AutoComplete>
         </Form.Item>
 
         <Form.Item
-          label="Captcha"
-          extra="We must make sure that your are a human."
+          label="验证码"
+          extra="我们必须确认您是个人类！"
         >
           <Row gutter={8}>
             <Col span={12}>
@@ -279,7 +279,7 @@ function RegistrationForm() {
                 rules={[
                   {
                     required: true,
-                    message: "Please input the captcha you got!",
+                    message: "请输入验证码！",
                   },
                 ]}
               >
@@ -287,7 +287,7 @@ function RegistrationForm() {
               </Form.Item>
             </Col>
             <Col span={12}>
-              <Button>Get captcha</Button>
+              <Button>获取验证码</Button>
             </Col>
           </Row>
         </Form.Item>
@@ -300,15 +300,15 @@ function RegistrationForm() {
               validator: (_, value) =>
                 value
                   ? Promise.resolve()
-                  : Promise.reject(new Error("Should accept agreement")),
+                  : Promise.reject(new Error("请接受协议！")),
             },
           ]}
           {...tailFormItemLayout}
         >
           <Checkbox>
-            I have read the{" "}
+            我已经阅读{" "}
             <a href="/" target="_blank">
-              agreement
+              协议
             </a>
           </Checkbox>
         </Form.Item>

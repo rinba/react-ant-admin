@@ -4,12 +4,12 @@
 
       
 const routes = [{
+  [MENU_PATH]: "/details/person",
+  components: () => import("../pages/details/person.tsx")
+}, {
   [MENU_PATH]: "/form/index",
   [MENU_LAYOUT]: 'FULLSCREEN',
   components: () => import("../pages/form/index.tsx")
-}, {
-  [MENU_PATH]: "/details/person",
-  components: () => import("../pages/details/person.tsx")
 }, {
   [MENU_PATH]: "/icons",
   components: () => import("../pages/icons/index.tsx")
