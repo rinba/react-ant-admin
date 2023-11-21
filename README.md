@@ -9,13 +9,13 @@ admin123/user123（密码）
 
 **安装步骤：**
 ```
-git clone 项目地址       // 把项目下载到本地
+git clone 项目地址       // 把项目克隆到本地
 cd react-ant-admin      // 进入项目目录
-npm install             // 安装项目依赖，等待安装完成之后，安装失败可用 cnpm 或 yarn
+npm install             // 安装项目依赖
 npm run dev             // 运行项目
 
 npm run "dev:mock"      // 本地模拟数据，假数据来显示项目信息
-npm run build           // 打包
+npm run build           // 打包项目
 npm run preview         // 打包后的产物，开启本地预览
 
 ```
