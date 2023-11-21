@@ -52,7 +52,7 @@ function Login() {
   return (
     <div className="login-container" style={{ backgroundColor: token.colorBgContainer }}>
       <div className="wrapper">
-        <div className="title">react-ant-admin管理系统</div>
+        <div className="title">后台管理系统</div>
         <div className="welcome">欢迎使用，请先登录</div>
         <Form
           className="login-form"
